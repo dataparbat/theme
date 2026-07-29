@@ -1,0 +1,57 @@
+/* ————————————————————————————————————————————————————————————————
+   Layer 1 — HOUSE (Foundation v15). The console chrome: cool blue-grey
+   neutrals that stay constant while the product layer changes underneath.
+   Light-first; dark pairs via media query AND [data-theme] override (the
+   explicit attribute wins in both directions).
+   ———————————————————————————————————————————————————————————————— */
+:root{
+  /* chrome */
+  --color-h-bg:#f7f8fa; --color-h-surface:#ffffff;
+  --color-h-ink:#171a21; --color-h-ink-2:#5a6172; --color-h-ink-3:#8a90a0;
+  --color-h-line:#e3e6ec; --color-h-hover:#eef0f4; --color-h-down:#e6e9ef;
+
+  /* staff view (ruling 47: loud on purpose, never mistakable) */
+  --color-staff:#4a3d7a; --color-staff-wash:#efecf7; --color-staff-ink:#3d3266;
+
+  /* overlays: one shadow, one scrim — never stacked */
+  --scrim:rgba(12,16,14,.44);
+  --overlay-shadow:0 12px 32px rgba(10,14,12,.14);
+
+  /* type — self-hosted, OFL (production loads the faces; these are the stacks) */
+  --font-display:"Schibsted Grotesk","Helvetica Neue",system-ui,sans-serif;
+  --font-sans:"Instrument Sans",system-ui,-apple-system,sans-serif;
+  --font-ui:"Instrument Sans",system-ui,-apple-system,sans-serif;
+  --font-mono:"Commit Mono",ui-monospace,"SF Mono",Menlo,monospace;
+
+  /* geometry + rhythm */
+  --radius-s:3px; --radius-m:6px; --radius-control:2px;              /* controls sit at 2px, set per component */
+  --s1:4px; --s2:8px; --s3:12px; --s4:16px; --s5:24px; --s6:32px; --s7:48px;
+  --dur:120ms;
+  --bp-rail:1240px; --bp-min:920px;
+}
+@media (prefers-color-scheme: dark){
+  :root{
+    --color-h-bg:#0f1114; --color-h-surface:#14161a;
+    --color-h-ink:#e8e9ec; --color-h-ink-2:#8f95a1; --color-h-ink-3:#6b7180;
+    --color-h-line:#24272c; --color-h-hover:#1a1d22; --color-h-down:#20242a;
+    --color-staff:#a99ce0; --color-staff-wash:#1e1b2e; --color-staff-ink:#bdb2ea;
+    --scrim:rgba(0,0,0,.56);
+    --overlay-shadow:0 12px 32px rgba(0,0,0,.5);
+  }
+}
+:root[data-theme="dark"]{
+  --color-h-bg:#0f1114; --color-h-surface:#14161a;
+  --color-h-ink:#e8e9ec; --color-h-ink-2:#8f95a1; --color-h-ink-3:#6b7180;
+  --color-h-line:#24272c; --color-h-hover:#1a1d22; --color-h-down:#20242a;
+  --color-staff:#a99ce0; --color-staff-wash:#1e1b2e; --color-staff-ink:#bdb2ea;
+  --scrim:rgba(0,0,0,.56);
+  --overlay-shadow:0 12px 32px rgba(0,0,0,.5);
+}
+:root[data-theme="light"]{
+  --color-h-bg:#f7f8fa; --color-h-surface:#ffffff;
+  --color-h-ink:#171a21; --color-h-ink-2:#5a6172; --color-h-ink-3:#8a90a0;
+  --color-h-line:#e3e6ec; --color-h-hover:#eef0f4; --color-h-down:#e6e9ef;
+  --color-staff:#4a3d7a; --color-staff-wash:#efecf7; --color-staff-ink:#3d3266;
+  --scrim:rgba(12,16,14,.44);
+  --overlay-shadow:0 12px 32px rgba(10,14,12,.14);
+}

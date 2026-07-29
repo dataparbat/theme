@@ -1,0 +1,68 @@
+/* ————————————————————————————————————————————————————————————————
+   Layer 2 — SENDZILA (Foundation v15, instantiation #1). Product neutrals
+   carry a faint green cold in light; the accent is LEDGER GREEN — brand and
+   delivered-state share a family on purpose, because deliverability is the
+   product. Amber and red are semantic only. A second product copies this
+   file's NAMES and brings its own values.
+   ———————————————————————————————————————————————————————————————— */
+:root{
+  /* product ground + surfaces */
+  --color-bg:#fafbfa; --color-surface:#ffffff; --color-surface-2:#f3f6f4;
+  --color-ink:#182420; --color-ink-2:#5c6a64; --color-ink-3:#6e7973;
+  --color-line:#e4e8e5; --color-line-strong:#c9d1cb;
+
+  /* the accent family (ledger green) */
+  --color-accent:#0d5c43; --color-accent-hover:#0b4f3a; --color-accent-down:#094433;
+  --color-accent-ink:#0a4a37; --color-accent-wash:#eaf3ef;
+  --color-on-accent:#f2f7f4;
+  --color-quiet-hover:#eff2f0; --color-quiet-down:#e7ebe8;
+
+  /* semantic — attention only, never decoration */
+  --color-warn:#946300; --color-warn-wash:#f6efdd;
+  --color-crit:#a3312c; --color-crit-wash:#f8ebea;
+
+  /* dataviz ramp (accent-derived) */
+  --color-viz-1:#0d5c43; --color-viz-2:#3e7f68; --color-viz-3:#6fa28e; --color-viz-4:#a3c5b6;
+  --color-viz-5:#d3e2da; --color-viz-neutral:#9aa5a0; --color-viz-ghost:#d3e2da;
+}
+@media (prefers-color-scheme: dark){
+  :root{
+    --color-bg:#0e1011; --color-surface:#151718; --color-surface-2:#1b1e1f;
+    --color-ink:#f0f1f0; --color-ink-2:#9ca19e; --color-ink-3:#8a918d;
+    --color-line:#26292a; --color-line-strong:#3d4341;
+    --color-accent:#34ab80; --color-accent-hover:#40bc8e; --color-accent-down:#2c9a72;
+    --color-accent-ink:#64d0a8; --color-accent-wash:#16291f;
+    --color-on-accent:#0b1611;
+    --color-quiet-hover:#1d2021; --color-quiet-down:#232627;
+    --color-warn:#d9a943; --color-warn-wash:#2a2214;
+    --color-crit:#e0716a; --color-crit-wash:#2b1917;
+    --color-viz-1:#34ab80; --color-viz-2:#2c9a72; --color-viz-3:#52bd95; --color-viz-4:#84d1b3;
+    --color-viz-5:#293c32; --color-viz-neutral:#61696b; --color-viz-ghost:#293c32;
+  }
+}
+:root[data-theme="dark"]{
+  --color-bg:#0e1011; --color-surface:#151718; --color-surface-2:#1b1e1f;
+  --color-ink:#f0f1f0; --color-ink-2:#9ca19e; --color-ink-3:#8a918d;
+  --color-line:#26292a; --color-line-strong:#3d4341;
+  --color-accent:#34ab80; --color-accent-hover:#40bc8e; --color-accent-down:#2c9a72;
+  --color-accent-ink:#64d0a8; --color-accent-wash:#16291f;
+  --color-on-accent:#0b1611;
+  --color-quiet-hover:#1d2021; --color-quiet-down:#232627;
+  --color-warn:#d9a943; --color-warn-wash:#2a2214;
+  --color-crit:#e0716a; --color-crit-wash:#2b1917;
+  --color-viz-1:#34ab80; --color-viz-2:#2c9a72; --color-viz-3:#52bd95; --color-viz-4:#84d1b3;
+  --color-viz-5:#293c32; --color-viz-neutral:#61696b; --color-viz-ghost:#293c32;
+}
+:root[data-theme="light"]{
+  --color-bg:#fafbfa; --color-surface:#ffffff; --color-surface-2:#f3f6f4;
+  --color-ink:#182420; --color-ink-2:#5c6a64; --color-ink-3:#6e7973;
+  --color-line:#e4e8e5; --color-line-strong:#c9d1cb;
+  --color-accent:#0d5c43; --color-accent-hover:#0b4f3a; --color-accent-down:#094433;
+  --color-accent-ink:#0a4a37; --color-accent-wash:#eaf3ef;
+  --color-on-accent:#f2f7f4;
+  --color-quiet-hover:#eff2f0; --color-quiet-down:#e7ebe8;
+  --color-warn:#946300; --color-warn-wash:#f6efdd;
+  --color-crit:#a3312c; --color-crit-wash:#f8ebea;
+  --color-viz-1:#0d5c43; --color-viz-2:#3e7f68; --color-viz-3:#6fa28e; --color-viz-4:#a3c5b6;
+  --color-viz-5:#d3e2da; --color-viz-neutral:#9aa5a0; --color-viz-ghost:#d3e2da;
+}

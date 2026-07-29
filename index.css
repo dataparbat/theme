@@ -1,0 +1,7 @@
+/* @dataparbat/theme — the console's look, from Foundation v15 (canvas F, locked).
+   house.css is Layer 1 (chrome, constant across products); sendzila.css is
+   Layer 2 (product neutrals + the ledger-green accent), instantiation #1.
+   A future product ships its own Layer-2 file against the same names. */
+@import "./fonts.css";
+@import "./house.css";
+@import "./sendzila.css";

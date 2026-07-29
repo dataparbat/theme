@@ -1,0 +1,22 @@
+{
+  "name": "@dataparbat/theme",
+  "version": "0.1.0",
+  "private": false,
+  "description": "DataParbat console theme — Foundation v15 token values. Two layers: house chrome (constant) + per-product accent pack (Sendzila is instantiation #1).",
+  "exports": {
+    ".": {
+      "types": "./index.d.ts",
+      "default": "./index.css"
+    },
+    "./house.css": "./house.css",
+    "./sendzila.css": "./sendzila.css",
+    "./fonts.css": "./fonts.css"
+  },
+  "files": [
+    "*.css",
+    "*.d.ts",
+    "fonts/"
+  ],
+  "license": "MIT",
+  "repository": "github:dataparbat/theme"
+}
