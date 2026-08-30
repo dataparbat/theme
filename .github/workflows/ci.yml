@@ -1,0 +1,45 @@
+name: CI
+
+# The brand tokens every surface renders against. Nothing here compiles and
+# nothing is installed — this package is CSS and font files — so the check is
+# the one thing that can actually break: a path this package promises to
+# export, that has moved. A CSS import that 404s is a page with no colours and
+# no error anywhere.
+
+on:
+  pull_request:
+    branches: [main]
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  exports:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - name: Every published path resolves
+        run: |
+          node -e '
+            const fs = require("node:fs");
+            const pkg = require("./package.json");
+            const named = Object.values(pkg.exports ?? {}).flatMap((entry) =>
+              typeof entry === "string" ? [entry] : Object.values(entry),
+            );
+            const listed = (pkg.files ?? []).filter((f) => !f.includes("*"));
+            const missing = [...named, ...listed].filter((p) => !fs.existsSync(p));
+            if (missing.length) {
+              console.error("package names paths that do not exist:", missing);
+              process.exit(1);
+            }
+            console.log(`${named.length} exported paths resolve`);
+          '
